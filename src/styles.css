@@ -5,6 +5,34 @@ body {
   color: #333;
 }
 
+/* Error page specific styles */
+body.error-page {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  text-align: center;
+  padding: 40px;
+}
+.halo {
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+  color: #ffd700;
+  text-shadow: 0 0 16px #fff7b2;
+}
+.message {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  font-family: 'Playfair Display', serif;
+}
+.cloud {
+  font-size: 4rem;
+  color: #bcdffb;
+  margin-bottom: 1em;
+}
+.fun {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+
 header {
   background-color: #d0e7ff;
   color: white;
