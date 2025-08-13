@@ -3,9 +3,10 @@ const SAINTS_WEBSERVICE = "https://api.jakemalarz.com";
 document.addEventListener('DOMContentLoaded', () => {
   // Get today's date in MM-DD-YYYY format
   const today = new Date();
-  const mm = String(today.getMonth() + 1).padStart(2, '0');
-  const dd = String(today.getDate()).padStart(2, '0');
-  const yyyy = today.getFullYear();
+  const clientDate = today.toLocaleDateString('en-US', { timeZone: 'America/New_York' });
+  const [m, d, yyyy] = clientDate.split("/");
+  const mm = String(m).padStart(2, '0');
+  const dd = String(d).padStart(2, '0');
   const formattedDate = `${mm}-${dd}-${yyyy}`;
   const restEndpoint = SAINTS_WEBSERVICE;
   fetch(`${restEndpoint}?date=${formattedDate}`)
