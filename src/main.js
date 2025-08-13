@@ -1,5 +1,4 @@
-const SAINTS_WEBSERVICE = "http://localhost:3000";
-const SAINTS_WEBSERVICE_GET_DAY_INFO = "get-day-info";
+const SAINTS_WEBSERVICE = "https://api.jakemalarz.com";
 
 document.addEventListener('DOMContentLoaded', () => {
   // Get today's date in MM-DD-YYYY format
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const yyyy = today.getFullYear();
   const formattedDate = `${mm}-${dd}-${yyyy}`;
   const restEndpoint = SAINTS_WEBSERVICE;
-  fetch(`${restEndpoint}/${SAINTS_WEBSERVICE_GET_DAY_INFO}?date=${formattedDate}`)
+  fetch(`${restEndpoint}?date=${formattedDate}`)
     .then(response => response.json())
     .then(data => {
       const subHeader = document.getElementById('sub-header');
